@@ -8,6 +8,8 @@ cask "anka-build-cloud-registry" do
   homepage "https://veertu.com/"
   desc "Anka is a suite of software for creating and managing macOS VMs to run on top of Apple hardware and macOS. The Anka Build Cloud includes a Controller (GUI + API) & Registry to integrate with commonly used CI systems like Github Actions, Jenkins, Teamcity, GitLab, and Buildkite. This is the registry only."
 
+  depends_on macos: ">= :yosemite"
+
   pkg "AnkaRegistry-#{version}.pkg"
 
   uninstall launchctl: [

@@ -8,6 +8,8 @@ cask "anka-build-cloud-controller-and-registry" do
   homepage "https://veertu.com/"
   desc "Anka is a suite of software for creating and managing macOS VMs to run on top of Apple hardware and macOS. The Anka Build Cloud includes a Controller (GUI + API) & Registry to integrate with commonly used CI systems like Github Actions, Jenkins, Teamcity, GitLab, and Buildkite."
 
+  depends_on macos: ">= :yosemite"
+
   pkg "AnkaControllerRegistry-#{version}.pkg"
 
   # ANKA-1950: remove the need for unload and handle it in the uninstall.sh
