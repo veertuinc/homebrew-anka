@@ -10,6 +10,7 @@ cask "anka-virtualization" do
 
   pkg "Anka-#{version}.pkg"
 
+  # ANKA-1950: remove the need for unload and handle it in the uninstall.sh
   uninstall launchctl: [
     "com.veertu.nlimit",
     "com.veertu.vlaunch",
@@ -28,9 +29,6 @@ cask "anka-virtualization" do
     "~/Library/Logs/Anka",
     "~/Library/Preferences/com.veertu.ankaview.plist",
     "/Library/Application Support/Veertu/Anka",
-  ], rmdir: [
-      "~/Library/Application Support/Veertu",
-      "/Library/Application Support/Veertu",
   ]
 
   caveats do
