@@ -1,6 +1,7 @@
 cask "anka-build-cloud-controller-and-registry" do
-  version "1.11.0-59d63cca"
-  sha256 "4ed14fedb8086bd5d1b0d31a2f58d3ec204c9373fd8637d307106cd15f7066b7"
+  version "1.12.0-65cba643"
+  # https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/sha256.md
+  sha256 "dbd9cc5ca0559cf151db33a9bcb8963d32e964ecc4295d4abd51bdab76dc4634"
 
   # d1efqjhnhbvc57.cloudfront.net/ was verified as official when first introduced to the cask
   url "https://d1efqjhnhbvc57.cloudfront.net/AnkaControllerRegistry-#{version}.pkg"
