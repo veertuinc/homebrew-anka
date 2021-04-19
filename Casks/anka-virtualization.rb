@@ -1,6 +1,6 @@
 cask "anka-virtualization" do
-  version "2.3.2.125"
-  sha256 "8ae1879d56ba1af82fd2c172df05c5cb1b4b58f7dd7883faeae2b1e2b7d85206"
+  version "2.4.1.130"
+  sha256 "30917cc046ea6cd1de135c11fd1e0151e521c4974916fab6ee9f9c82ff8ba21b"
 
   url "https://d1efqjhnhbvc57.cloudfront.net/Anka-#{version}.pkg",
       verified: "d1efqjhnhbvc57.cloudfront.net/"
@@ -29,6 +29,7 @@ cask "anka-virtualization" do
   zap trash: [
     "~/.anka",
     "~/Library/Application Support/Veertu/Anka",
+    "~/Library/Application Support/CrashReporter/ankahv_*.plist",
     "~/Library/Logs/Anka",
     "~/Library/Preferences/com.veertu.ankaview.plist",
     "/Library/Application Support/Veertu/Anka",
