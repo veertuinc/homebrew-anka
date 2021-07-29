@@ -1,4 +1,4 @@
-class AnkaScripts < Formula
+class AnkaGettingStartedScripts < Formula
   desc "Various scripts for setting up and testing Anka software on your local machine"
   homepage "https://github.com/veertuinc/getting-started"
   url "https://github.com/veertuinc/getting-started/archive/master.zip"
