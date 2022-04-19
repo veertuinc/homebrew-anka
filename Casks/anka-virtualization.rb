@@ -1,6 +1,6 @@
 cask "anka-virtualization" do
-  version "2.5.4.137"
-  sha256 "ae639ab12ecab9101f4eadbbb46bac91037235f74cbcda19a6ac592956eb799f"
+  version "2.5.5.143"
+  sha256 "bf7201575fefe9606de93d91e042f8e4ad9c95e0024fcd86da8b165bb9e28895"
 
   url "https://downloads.veertu.com/anka/Anka-#{version}.pkg"
   name "Anka Virtualization"
@@ -13,16 +13,16 @@ cask "anka-virtualization" do
     regex(/Anka[._-]?v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :big_sur"
 
   pkg "Anka-#{version}.pkg"
 
   uninstall launchctl: [
-    "com.veertu.nlimit",
-    "com.veertu.vlaunch",
-    "com.veertu.anka.lupd",
     "com.veertu.anka.ankakbd",
     "com.veertu.anka.ankanetd",
+    "com.veertu.anka.lupd",
+    "com.veertu.nlimit",
+    "com.veertu.vlaunch",
   ],
             script:    {
               executable: "/Library/Application Support/Veertu/Anka/tools/uninstall.sh",
@@ -31,16 +31,16 @@ cask "anka-virtualization" do
             }
 
   zap trash: [
+    "/Library/Application Support/Veertu/Anka",
     "~/.anka",
-    "~/Library/Application Support/Veertu/Anka",
     "~/Library/Application Support/CrashReporter/ankahv_*.plist",
+    "~/Library/Application Support/Veertu/Anka",
     "~/Library/Logs/Anka",
     "~/Library/Preferences/com.veertu.ankaview.plist",
-    "/Library/Application Support/Veertu/Anka",
   ],
       rmdir: [
-        "~/Library/Application Support/Veertu",
         "/Library/Application Support/Veertu",
+        "~/Library/Application Support/Veertu",
       ]
 
   caveats do
