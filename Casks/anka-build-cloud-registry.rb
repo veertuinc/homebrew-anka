@@ -13,8 +13,6 @@ cask "anka-build-cloud-registry" do
     regex(/AnkaRegistry[._-]?v?(\d+(?:\.\d+)*[._-]\h+)\.pkg/i)
   end
 
-  depends_on macos: ">= :yosemite"
-
   pkg "AnkaRegistry-#{version}.pkg"
 
   uninstall launchctl: [
