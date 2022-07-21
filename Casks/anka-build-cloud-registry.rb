@@ -1,6 +1,6 @@
 cask "anka-build-cloud-registry" do
-  version "1.25.0-c6de18fa"
-  sha256 "6e29c24f8757f654bd35061b034b37c2219b74d2d47bf628cad915347457e173"
+  version "1.26.0-757a6a71"
+  sha256 "674c8b87d940485c0f2b8cb83a4d07adbd4e342f2f7bff634d3df1dc0e006fc0"
 
   url "https://downloads.veertu.com/anka/AnkaRegistry-#{version}.pkg"
   name "Anka Build Cloud Registry"
@@ -16,9 +16,9 @@ cask "anka-build-cloud-registry" do
   pkg "AnkaRegistry-#{version}.pkg"
 
   uninstall launchctl: [
-    "com.veertu.anka.registry.plist",
-    "com.veertu.anka.registry",
-  ],
+              "com.veertu.anka.registry.plist",
+              "com.veertu.anka.registry",
+            ],
             pkgutil:   "com.veertu.anka.registry.pkg",
             delete:    [
               "/Library/Application Support/Veertu/Anka/bin/fvutil",
