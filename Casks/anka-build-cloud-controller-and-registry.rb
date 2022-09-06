@@ -1,6 +1,6 @@
 cask "anka-build-cloud-controller-and-registry" do
-  version "1.26.0-7f63ad8a"
-  sha256 "bdd1d262f7a9bf8f82c4e0ac2ca17c9b4895c24cc83b5596309ae5b2f23e20e5"
+  version "1.28.0-347c73ea"
+  sha256 "3b407cffcf0c8abb91b1d30466e57c2e257cab28751aa788cd30c791f2fa2d5a"
 
   url "https://downloads.veertu.com/anka/AnkaControllerRegistry-#{version}.pkg"
   name "Anka Build Cloud Controller & Registry"
