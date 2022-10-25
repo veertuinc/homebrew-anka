@@ -1,13 +1,14 @@
 cask "anka-virtualization" do
-  arch = Hardware::CPU.intel? ? "intel" : "arm"
+  arch arm: "arm", intel: "intel"
 
-  if Hardware::CPU.intel?
+  on_intel do
     version "2.5.7.148"
     sha256 "e600e8144f5ca5134aa94785bc9bbc567193b1065944573df9cc9daf7d8f796e"
     depends_on macos: ">= :big_sur"
-  else
-    version "3.1.0.151"
-    sha256 "6648a9cd0be56fcde4b5c150b2a59e8302306c477ad1a335f1dd56cb8b42a0c"
+  end
+  on_arm do
+    version "3.1.1.152"
+    sha256 "a1fd1558fc7ba5f9b3c9eb3636e33b1b5c99be79dd6521a491e14b101810e004"
     depends_on macos: ">= :monterey"
   end
 
