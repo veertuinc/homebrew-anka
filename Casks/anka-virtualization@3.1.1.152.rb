@@ -7,12 +7,6 @@ cask "anka-virtualization@3.1.1.152" do
   desc "CLI tool for managing and creating virtual machines"
   homepage "https://veertu.com/"
 
-  livecheck do
-    url "https://veertu.com/downloads/anka-virtualization-#{livecheck_folder}"
-    strategy :header_match
-    regex(/Anka[._-]?v?(\d+(?:\.\d+)+)#{arch}\.pkg/i)
-  end
-
   pkg "Anka-#{version}-arm.pkg"
 
   uninstall launchctl: [
