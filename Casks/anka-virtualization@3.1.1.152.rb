@@ -1,4 +1,4 @@
-cask "anka-virtualization@3.1.1.152" do
+class AnkaVirtualizationAt311152 < Cask
   version "3.1.1.152"
   sha256 "a1fd1558fc7ba5f9b3c9eb3636e33b1b5c99be79dd6521a491e14b101810e004"
   depends_on macos: ">= :monterey"
