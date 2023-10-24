@@ -1,8 +1,9 @@
 cask "anka-build-cloud-registry" do
-  arch intel: "Amd64"
+  arch arm: "Arm64", intel: "Amd64"
 
   version "1.38.0-3989ee24"
-  sha256 intel: "0226f765bfffd43aa99310813aa47ef90c4582f6e9952f6950bc733f00e54376"
+  sha256 arm:   "fae24091f010db75c5404ffcdf3e493cb5f1f9639de352b9151f3fa179d733bb",
+         intel: "61ea865f7376434fc073001317bbe19bd1ba5ef465721cfac14db379abfca09e"
 
   pkg "AnkaRegistry#{arch}-#{version}.pkg"
 
