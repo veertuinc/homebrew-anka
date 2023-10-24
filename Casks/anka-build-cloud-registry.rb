@@ -1,19 +1,21 @@
 cask "anka-build-cloud-registry" do
-  version "1.36.1-cced806b"
-  sha256 "298121843485662e2241be02fb84ee1542cd4380e8bfceb1300757d570823108"
+  arch intel: "Amd64"
 
-  url "https://downloads.veertu.com/anka/AnkaRegistry-#{version}.pkg"
+  version "1.38.0-3989ee24"
+  sha256 intel: "0226f765bfffd43aa99310813aa47ef90c4582f6e9952f6950bc733f00e54376"
+
+  pkg "AnkaRegistry#{arch}-#{version}.pkg"
+
+  url "https://downloads.veertu.com/anka/AnkaRegistry#{arch}--#{version}.pkg"
   name "Anka Build Cloud Registry"
   desc "Store Anka's virtual machines in a central location"
   homepage "https://veertu.com/"
 
   livecheck do
-    url "https://veertu.com/downloads/ankaregistry-mac-latest"
+    url "https://veertu.com/downloads/anka-build-cloud-registry-darwin-#{arch.downcase}-latest"
+    regex(/AnkaRegistry#{arch}[._-]?v?(\d+(?:\.\d+)*[._-]\h+)\.pkg/i)
     strategy :header_match
-    regex(/AnkaRegistry[._-]?v?(\d+(?:\.\d+)*[._-]\h+)\.pkg/i)
   end
-
-  pkg "AnkaRegistry-#{version}.pkg"
 
   uninstall launchctl: [
               "com.veertu.anka.registry.plist",
