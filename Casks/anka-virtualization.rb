@@ -1,6 +1,6 @@
 cask "anka-virtualization" do
-  version "3.3.3.168"
-  sha256 "f8101d9bb4ac0b80cc6261273edc9c3532514d0008fe70e7cd35442b6f872d2b"
+  version "3.4.2.190"
+  sha256 "616888f7af2559dd6b9a721eb7b2606e6ec5b0c65cbee9c30578b42b73b04209"
 
   url "https://downloads.veertu.com/anka/Anka-#{version}.pkg"
   name "Anka Virtualization"
@@ -28,7 +28,8 @@ cask "anka-virtualization" do
               executable: "/Library/Application Support/Veertu/Anka/tools/uninstall.sh",
               args:       ["-f"],
               sudo:       true,
-            }
+            },
+            pkgutil:   "com.veertu.anka.agent.pkg"
 
   zap trash: [
         "/Library/Application Support/Veertu/Anka",
